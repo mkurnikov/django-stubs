@@ -22,7 +22,10 @@ class Collector:
         self,
         objs: Collection[Optional[Model]],
         source: Optional[Type[Model]] = ...,
+        nullable: bool = ...,
+        collect_related: bool = ...,
         source_attr: Optional[str] = ...,
-        **kwargs: Any
+        reverse_dependency: bool = ...,
+        keep_parents: bool = ...,
     ) -> None: ...
     def can_fast_delete(self, objs: Union[Model, Iterable[Model]], from_field: Optional[Field] = ...) -> bool: ...
